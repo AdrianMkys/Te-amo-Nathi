@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¿Puedo ser tu novio?</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: pink url(https://e1.pxfuel.com/desktop-wallpaper/801/1017/desktop-wallpaper-field-tulips-flowers-tulip-summer.jpg) no-repeat center center fixed;
+            background-size: cover;
+        }
+        .container {
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        button {
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        #no {
+            background-color: #ccc;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>¿Puedo ser tu novio?</h1>
+        <button id="si" onclick="alert('Lo sabía!!! Te amo mi Nathi 😍❤️❤️❤️')">Sí</button>
+        <button id="no" onclick="cambiarTexto()">No</button>
+    </div>
+    <script>
+        const mensajes = [
+            "Porfis", "No te arrepentirás?", "Please please :(", "A poco no?", 
+            ":((((((", "Ándale", "Dame una oportunidad :(", "Sisisisiis?", 
+            "Wo a llorar", "PorfaaAAAaaaaA", "Ya no lo oprimas :(", 
+            "O sea que no me quieres", "Enserio no?", "Yo sé que si :(", 
+            "Aña", "Ig de la minita", "Ashhh", "Ushhh", "Consideralo :((", 
+            "Ya me cansé xd"
+        ];
+        let contador = 0;
+        const botonSi = document.getElementById('si');
+        const botonNo = document.getElementById('no');
+
+        function cambiarTexto() {
+            botonSi.style.transform = `scale(${1.2 + (contador * 0.1)})`;
+            botonNo.textContent = mensajes[contador];
+            contador = (contador + 1) % mensajes.length;
+        }
+    </script>
+</body>
+</html>
